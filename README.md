@@ -1,4 +1,5 @@
-# приложение aleksvladyko.github.io/todo/
+# [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=ссылка+на+придожение)](https://aleksvladyko.github.io/todo/)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
