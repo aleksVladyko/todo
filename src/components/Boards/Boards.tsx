@@ -73,6 +73,7 @@ export const Boards: FC<BoardsProp> = ({
           boards.map((board) => {
             return (
               <BoardComponent
+                key={board.id}
                 setModal={setModal}
                 handleStart={handleStart}
                 handleMore={handleMore}

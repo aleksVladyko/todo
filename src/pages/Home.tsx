@@ -33,7 +33,7 @@ export const Home: FC<{ setProjects: Function; projects: Project[] }> = ({
 
       <ul className="container projects__container">
         {projects &&
-          projects.map((project) => <ProjectComponent project={project} />)}
+          projects.map((project) => <ProjectComponent key={project.id} project={project} />)}
       </ul>
     </div>
   )

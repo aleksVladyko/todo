@@ -47,6 +47,7 @@ export const Board: FC<BoardProp> = ({
           const isDead = Date.parse(item.deadline) - Date.now() < 0
           return (
             <Item
+              key={item.id}
               item={item}
               isDead={isDead}
               board={board}
