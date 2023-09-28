@@ -1,15 +1,56 @@
 @import "./vars.scss";
 
+// Общие стили
+
+body {
+  font-family: Arial, sans-serif;
+  background: $bg-color;
+  color: $text-df;
+}
+
+// Миксины для различных устройств
+
+@mixin mobile {
+  .projects__title{
+    font-size: 2em;
+  }
+  font-size: 2em;
+}
+
+@mixin tablet {
+  /* Стили для планшетов */
+  /* Например: расположение элементов, изменение отступов и т.д. */
+}
+
+@mixin desktop {
+  /* Стили для десктопных устройств */
+  /* Например: изменение колонок, выравнивание контента и т.д. */
+}
+
+// Применение миксинов с использованием медиа-запросов
+
+#root {
+  // Мобильные устройства
+  @media only screen and (max-width: 480px) {
+    @include mobile;
+  }
+
+  // Планшеты
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    @include tablet;
+  }
+
+  // Десктопные устройства
+  @media only screen and (min-width: 1025px) {
+    @include desktop;
+  }
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background: $bg-color;
-  color: $text-df;
-}
 
 .container {
   max-width: 70%;

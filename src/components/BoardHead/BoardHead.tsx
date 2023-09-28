@@ -21,7 +21,8 @@ export const BoardHead: FC<BoardHeadProps> = ({
   const handleDelete = () => {
     const conf = confirm("Are you sure to delete this project?")
     if (!conf) return
-    setProjects(removeProject(projectId))
+    const updatedProjects = removeProject(projectId)
+    setProjects(updatedProjects)
     navigate("/")
   }
 

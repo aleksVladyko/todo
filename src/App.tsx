@@ -24,18 +24,16 @@ const App: FC = () => {
   }, [])
 
   return (
-    <div>
-      <Routes>
-        <Route
-          path="/"
-          element={<Home projects={projects} setProjects={setProjects} />}
-        />
-        <Route
-          path="/project/:projectId"
-          element={<BoardsPage setProjects={setProjects} projects={projects} />}
-        />
-      </Routes>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={<Home projects={projects} setProjects={setProjects} />}
+      />
+      <Route
+        path="/project/:projectId"
+        element={<BoardsPage setProjects={setProjects} projects={projects} />}
+      />
+    </Routes>
   )
 }
 
