@@ -3,9 +3,10 @@
 .project {
   text-align: center;
   background: $card-color;
-  padding: 20px 20px;
   border: 1px solid $border-color;
   border-radius: 10px;
+  animation-name: bigin;
+  animation-duration: 3s;
   &__item {
     &-go {
       background: $success-color;
@@ -49,9 +50,17 @@
 .div_delete {
   display: flex;
   justify-content: end;
-  opacity: .5;
+  opacity: 0.5;
   width: 100%;
-  & .btn_delete{
+  & .btn_delete {
     cursor: pointer;
+  }
+}
+@keyframes bigin {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }

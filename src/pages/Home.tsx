@@ -18,17 +18,17 @@ export const Home: FC<{ setProjects: Function; projects: Project[] }> = ({
 
   return (
     <div className="projects">
-      <div className="projects__form">
-        <form>
+       
+        <form className="projects__form">
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
             type="text"
+            placeholder="Name project"
           />
           <button onClick={(e) => handleCreate(e)}>Create</button>
         </form>
-        <div className="projects__search">Search</div>
-      </div>
+      
       <h1 className="projects__title">Projects:</h1>
 
       <ul className="container projects__container">
