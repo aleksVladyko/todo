@@ -2,14 +2,14 @@
 
 // Общие стили
 * {
+  // background: linear-gradient(60deg, #4FC0E2, #494D74);
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background: $bg-color;
+  background: $bg-gradient;
   color: $text-df;
 }
 
@@ -18,30 +18,37 @@ body {
 @mixin mobile {
   height: 100%;
   width: 100%;
-  background-color: $bg-color-mobile;
+  // background-color: $bg-color-mobile;
   .projects__form {
+    position: sticky;
+    top: 8px;
     display: flex;
     align-items: center;
-    background: #3a4350;
     flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
     input {
       text-align: center;
+      color: black;
+      font-size: 1.5em;
       width: 90%;
     }
     button {
       width: 90%;
       margin: 0;
     }
-}
+  }
+  .container {
+    height: 100%;
+    grid-auto-rows: 24vh;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(216px, 70vw));
+  }
 }
 
 @mixin tablet-landscape {
   orientation: landscape;
 }
 @mixin tablet-portrait {
-orientation: portrait;
+  orientation: portrait;
 }
 
 @mixin desktop {
@@ -78,10 +85,11 @@ orientation: portrait;
   }
 }
 
-.container {
-  max-width: 70%;
-  margin: 0 auto;
-}
+// .container {
+//   height: 100vh;
+//   max-width: 80%;
+//   margin: 0 auto;
+// }
 
 .app {
   display: flex;
@@ -93,40 +101,13 @@ a {
   color: inherit;
 }
 
-.tox-tinymce {
-  border: 2px solid $border-color !important;
-}
-
-.tox-statusbar {
-  display: none !important;
-}
-
-.tox-editor-container {
-  background: $card-color !important;
-}
-.tox-editor-header {
-  border: 1px solid $border-color;
-}
-
-.tox .tox-toolbar-overlord {
-  background-color: $card-color !important;
-}
-
-.tox .tox-edit-area__iframe {
-  background-color: rgb(87, 87, 87) !important;
-}
-
-.mce-content-body {
-  color: white !important;
-}
-
 .projects {
   &__form {
     display: flex;
     align-items: center;
-    background: $card-color;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0);
     input {
       height: 35px;
       font-size: 16px;
@@ -163,16 +144,20 @@ a {
   }
 
   &__title {
+    margin-top: 8px;
     text-align: center;
-    font-size: 36px;
-    margin-top: 20px;
+    font-size: 2rem;
   }
 
   &__container {
-    display: flex;
-    margin-top: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 216px;
+    height: 100vh;
+    max-width: 100%;
+    padding: 8px;
     justify-content: center;
-    gap: 10px;
+    justify-items: stretch;
+    gap: 8px;
   }
 }
