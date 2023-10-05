@@ -18,9 +18,10 @@ body {
 // Миксины для различных устройств
 
 @mixin mobile {
-  height: 100%;
   width: 100%;
-  // background-color: $bg-color-mobile;
+  .projects {
+    min-height: 100vh;
+  }
   .projects__form {
     position: sticky;
     top: 8px;
