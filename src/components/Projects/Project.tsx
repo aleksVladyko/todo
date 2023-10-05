@@ -24,7 +24,7 @@ export const Project: FC<{ project: ProjectT; setProjects: Function }> = ({
           ❌
         </button>
       </div>
-      <h2>{project.projectName}</h2>
+      <h2 className="title_project">{project.projectName}</h2>
       <div className="project__stats">
         {project.data &&
           project.data.map((status) => {

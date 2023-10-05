@@ -1,43 +1,38 @@
 @import "../../vars.scss";
 
 .project {
-  height: 20vh;
+  height: 25vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  align-items: stretch;
-  // justify-content: space-between;
-  background: $card-color;
-  border: 1px solid $border-color;
+  flex-wrap: wrap;
+  background: #3a4350;
+  border: 1px solid #30363d;
   border-radius: 16px;
   animation-name: bigin;
   animation-duration: 3s;
   &__item {
     &-go {
+      width: 100%;
+      align-self: flex-end;
       background: $success-color;
       border: 1px solid $border-color;
       padding: 3px 15px;
-      border-radius: 5px;
-     
+      border-radius: 16px;
+
       &:hover {
         color: white;
         border-color: $borderHover-color;
       }
     }
-
-    h2 {
-      
-      font-size: 24px;
-    }
   }
   &__stats {
     display: flex;
+    width: 100%;
     column-gap: 10px;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    // margin-top: 10px;
     h5 {
-      
       position: relative;
       span {
         font-size: 12px;
@@ -54,6 +49,8 @@
   }
 }
 .div_delete {
+  align-self: flex-start;
+  width: 100%;
   display: flex;
   justify-content: end;
 
@@ -70,4 +67,8 @@
   to {
     transform: scale(1);
   }
+}
+.title_project {
+  width: 100%;
+  align-self: flex-start;
 }
