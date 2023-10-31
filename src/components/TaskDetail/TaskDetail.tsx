@@ -38,7 +38,12 @@ export const TaskDetail: FC<{
 
   const currentDate = new Date()
   const newDate = addMonths(currentDate, 1)
-  const formattedDate = format(newDate, "PPPP")
+  const formattedDate = new Date(newDate).toLocaleDateString("ru-Ru", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })
 
   const handleDelete = (e: any) => {
     e.preventDefault()

@@ -42,7 +42,7 @@ export const Board: FC<BoardProp> = ({
           </button>
         ) : null}
       </h2>
-      <ul className="item-wapper">
+      <div className="item-wrapper">
         {board.items.map((item) => {
           const isDead = Date.parse(item.deadline) - Date.now() < 0
           return (
@@ -57,7 +57,7 @@ export const Board: FC<BoardProp> = ({
             />
           )
         })}
-      </ul>
+      </div>
     </div>
   )
 }

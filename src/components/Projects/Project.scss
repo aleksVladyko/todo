@@ -1,9 +1,8 @@
 @import "../../vars.scss";
 
 .project {
-  height: 25vh;
+  height: 24vh;
   display: flex;
-  justify-content: center;
   text-align: center;
   flex-wrap: wrap;
   background: #3a4350;
@@ -11,14 +10,18 @@
   border-radius: 16px;
   animation-name: bigin;
   animation-duration: 3s;
+  padding: 8px;
+  box-shadow: -4px 4px 8px 2px rgb(88, 87, 87);
   &__item {
     &-go {
       width: 100%;
+      margin-bottom: 4px;
       align-self: flex-end;
       background: $success-color;
       border: 1px solid $border-color;
       padding: 3px 15px;
       border-radius: 16px;
+      text-shadow: 2px 2px #30363d;
 
       &:hover {
         color: white;
@@ -49,6 +52,7 @@
   }
 }
 .div_delete {
+  margin-top: 4px;
   align-self: flex-start;
   width: 100%;
   display: flex;
@@ -69,6 +73,7 @@
   }
 }
 .title_project {
+  word-wrap: break-word;
   width: 100%;
   align-self: flex-start;
 }

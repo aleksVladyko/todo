@@ -20,6 +20,14 @@ export const Item: FC<ItemProp> = ({
   handleMore,
   handleStart,
 }) => {
+  const date = item.deadline
+  const dateDeadline = new Date(date).toLocaleDateString("ru-Ru", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })
+
   return (
     <div
       key={item.id}
@@ -50,12 +58,12 @@ export const Item: FC<ItemProp> = ({
           {item.title}
           <span className="item__title-taskcount">{item.tasks.length}</span>
         </h3>
-        <div className="item__deadline">{item.deadline}</div>
       </div>
       <div className="item__body">
         <div>
           <p>Files: {item.files?.length}</p>
           <p>Created: {item.created.toString()}</p>
+          <p>Deadline: {dateDeadline}</p>
         </div>
         <button className="item__more" onClick={() => handleMore(item)}>
           More

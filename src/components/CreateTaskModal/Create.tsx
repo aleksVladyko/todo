@@ -128,7 +128,7 @@ const Create: FC<{
               placeholder="Name"
               className="create__name"
             />
-            <h3>Decsription:</h3>
+            <h3>Description:</h3>
             <textarea
               onChange={(e) => setDesc(e.target.value)}
               value={desc}

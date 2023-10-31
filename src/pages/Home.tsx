@@ -18,22 +18,28 @@ export const Home: FC<{ setProjects: Function; projects: Project[] }> = ({
 
   return (
     <div className="projects">
-       
-        <form className="projects__form">
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            type="text"
-            placeholder="Name project"
-          />
-          <button onClick={(e) => handleCreate(e)}>Create</button>
-        </form>
-      
+      <form className="projects__form">
+        <input
+          maxLength={20}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          type="text"
+          placeholder="Name project"
+        />
+        <button onClick={(e) => handleCreate(e)}>Create</button>
+      </form>
+
       <h1 className="projects__title">Projects:</h1>
 
       <ul className="container projects__container">
         {projects &&
-          projects.map((project) => <ProjectComponent key={project.id} project={project} setProjects={setProjects} />)}
+          projects.map((project) => (
+            <ProjectComponent
+              key={project.id}
+              project={project}
+              setProjects={setProjects}
+            />
+          ))}
       </ul>
     </div>
   )

@@ -3,6 +3,7 @@
 .desks {
   &-content {
     display: flex;
+    min-height: 100dvh;
     padding: 40px;
     justify-content: space-between;
   }
